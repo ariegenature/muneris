@@ -1,0 +1,13 @@
+[watcher:muneris]
+cmd = muneris --chaussette-fd $(circus.sockets.muneris)
+use_sockets = True
+numprocesses = 3
+copy_env = True
+virtualenv = /opt/muneris
+
+[socket:muneris]
+host = 0.0.0.0
+port = 5000
+
+[env:muneris]
+MUNERIS_CONF = /opt/muneris/etc/muneris/muneris.ini
