@@ -100,3 +100,8 @@ ENV/
 
 # editors
 .lvimrc
+
+# robotgramework output
+log.html
+report.html
+output.xml
