@@ -55,7 +55,7 @@ setup(
         'flask',
         'konfig',
         'six',
-        'xdg',
+        'xdg<2.0',
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
