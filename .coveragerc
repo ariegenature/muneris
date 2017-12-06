@@ -3,6 +3,7 @@ branch = True
 omit =
     muneris/__init__.py
     muneris/__main__.py
+    muneris/flask_cli.py
 
 [report]
 # Regexes for lines to exclude from consideration
