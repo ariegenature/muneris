@@ -2,3 +2,5 @@ include muneris/VERSION
 include *.rst
 include .coveragerc
 recursive-include atests *.robot *.rst *.html *.txt
+recursive-include muneris/views *.html
+recursive-include muneris/static *

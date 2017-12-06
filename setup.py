@@ -16,6 +16,18 @@ with open(os.path.join(root_path, project_slug, 'VERSION'),
 with open(os.path.join(root_path, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+# Collect package data to be installed along with Python files
+package_data = [
+    'VERSION',
+    'static/*',
+]
+for root, _, fnames in os.walk(os.path.join(project_slug, 'views')):
+    for fname in fnames:
+        if fname.endswith('.html'):
+            package_data.append(
+                os.path.join(root.replace('{0}/'.format(project_slug), '', 1), fname)
+            )
+
 setup(
     name=project_slug,
     version=version,
@@ -84,7 +96,7 @@ setup(
         ],
     },
     package_data={
-        project_slug: ['VERSION'],
+        project_slug: package_data,
     },
     data_files=[
         ('examples', [

@@ -20,8 +20,8 @@ Homepage
     [Setup]    Start Virtual Display    1024    768
     Given user is anonymous
     When user browses to application homepage
-    Then 'Muneris homepage' text should be shown
-    Page Should Contain    Muneris homepage
+    Then 'Managed areas' text should be shown
+    And Title Should Be    Muneris
     [Teardown]    Close All Browsers
 
 
