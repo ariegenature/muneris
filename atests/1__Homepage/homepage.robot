@@ -20,7 +20,7 @@ Homepage
     [Setup]    Start Virtual Display    1024    768
     Given user is anonymous
     When user browses to application homepage
-    Then 'Managed areas' text should be shown
+    Then Page Should Contain    Managed areas
     And Title Should Be    Muneris
     [Teardown]    Close All Browsers
 
@@ -39,6 +39,3 @@ User Is Anonymous
 
 User Browses To Application Homepage
     Go To    ${SERVER_URL}
-
-'${text}' text should be shown
-    Page Should Contain    ${text}
